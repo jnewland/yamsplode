@@ -1,10 +1,10 @@
-# Yam(l)splode
+# YAM(L)splode
 
-Explodes multi-document Kubernetes YAML files into multiple files.
+Explodes multi-document Kubernetes YAML files into multiple files, each containing a single YAML document.
 
 #### Motivation
 
-For all sorts of reasons, folks seem to like distributing Kubernetes applications as one large file containing multiple documents. I like storing Kubernetes YAML in source control, and prefer to store each YAML document in an unique file so I can review and edit it before blindingly passing it to `kubectl`. Thus, this tool.
+For all sorts of valid reasons, folks seem to like distributing Kubernetes applications as one large file containing multiple YAML documents. I prefer to read (and sometimes edit) these sorts of files before blindly passing them to `kubectl`, and also generally prefer to store them in source control. Both of those thigns are way easier with a bunch of YAML files containing single documents rather than one large file. Thus, this tool.
 
 # Usage
 
