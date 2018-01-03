@@ -4,7 +4,7 @@ Explodes multi-document Kubernetes YAML files into multiple files, each containi
 
 #### Motivation
 
-For all sorts of valid reasons, folks seem to like distributing Kubernetes applications as one large file containing multiple YAML documents. I prefer to read (and sometimes edit) these sorts of files before blindly passing them to `kubectl`, and also generally prefer to store them in source control. Both of those thigns are way easier with a bunch of YAML files containing single documents rather than one large file. Thus, this tool.
+For all sorts of valid reasons, folks seem to like distributing Kubernetes applications as one large file containing multiple YAML documents. I prefer to read (and sometimes edit) these sorts of files before blindly passing them to `kubectl`, and also generally prefer to store them in source control. Both of those things are way easier with a bunch of YAML files containing single documents rather than one large file. Thus, this tool.
 
 # Usage
 
