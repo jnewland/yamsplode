@@ -10,6 +10,7 @@ else
 end
 
 @dir = ARGV[1] || '/out'
+raise "'#{@dir}' is not a directory" unless File.directory?(@dir)
 
 YAML.load_stream(data).each do |doc|
   next if doc.nil?
