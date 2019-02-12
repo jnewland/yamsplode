@@ -3,12 +3,16 @@ require 'active_support/core_ext/string'
 require 'yaml'
 
 @file = ARGV[0]
-raise unless File.file?(@file)
+data = if @file == "-"
+  $stdin.read
+else
+  File.read(@file)
+end
 
 @dir = ARGV[1]
 raise unless File.directory?(@dir)
 
-YAML.load_stream(File.read(@file)).each do |doc|
+YAML.load_stream(data).each do |doc|
   next if doc.nil?
   kind = doc['kind'].downcase.pluralize
   kind_dir = File.join(@dir, kind)
