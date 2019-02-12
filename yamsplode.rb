@@ -9,8 +9,7 @@ else
   File.read(@file)
 end
 
-@dir = ARGV[1]
-raise unless File.directory?(@dir)
+@dir = ARGV[1] || '/out'
 
 YAML.load_stream(data).each do |doc|
   next if doc.nil?
